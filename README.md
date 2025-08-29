@@ -228,11 +228,11 @@ https://http.cat/201.jpg
 ```
 https://invalid-domain-12345.com/image.jpg
 https://example.com/nonexistent-image.jpg
-not-a-valid-url
+https://not-a-valid-url
 https://httpstat.us/404
 https://broken-link.test/not-found.png
 https://completely-fake-domain-xyz.net/nope.jpg
-missing-protocol.com/image.png
+https://missing-protocol.com/image.png
 https://httpstat.us/500
 https://error-test-domain.org/not-found
 https://this-will-fail.com/error.jpg
@@ -246,7 +246,7 @@ https://invalid-domain-12345.com/image.jpg
 https://picsum.photos/800/600
 https://example.com/nonexistent-image.jpg
 https://placekitten.com/400/300
-not-a-valid-url
+https://not-a-valid-url
 https://http.cat/200.jpg
 https://httpstat.us/404
 https://placehold.co/600x400/png
@@ -254,7 +254,7 @@ https://broken-link.test/not-found.png
 https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg
 https://completely-fake-domain-xyz.net/nope.jpg
 https://picsum.photos/1000/600
-missing-protocol.com/image.png
+https://missing-protocol.com/image.png
 https://placekitten.com/800/600
 https://httpstat.us/500
 https://placehold.co/800x600/webp
