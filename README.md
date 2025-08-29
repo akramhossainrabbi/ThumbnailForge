@@ -205,3 +205,66 @@ Notes for Windows users
 - If you use native MySQL and PHP on Windows, ensure your PATH points to the installed binaries and that PHP has required extensions (mbstring, xml, curl, zip, etc.).
 - When using Docker for services (Redis, Node processing service), expose the ports and update `.env` hostnames accordingly (e.g., set REDIS_HOST=127.0.0.1 if using Docker on Windows).
 
+
+# 20 Mixed Valid and Invalid Image URLs for Testing
+
+## Valid Image URLs (10)
+
+```
+https://images.unsplash.com/photo-1575936123452-b67c3203c357
+https://picsum.photos/800/600
+https://placekitten.com/400/300
+https://http.cat/200.jpg
+https://placehold.co/600x400/png
+https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg
+https://picsum.photos/1000/600
+https://placekitten.com/800/600
+https://placehold.co/800x600/webp
+https://http.cat/201.jpg
+```
+
+## Invalid Image URLs (10)
+
+```
+https://invalid-domain-12345.com/image.jpg
+https://example.com/nonexistent-image.jpg
+not-a-valid-url
+https://httpstat.us/404
+https://broken-link.test/not-found.png
+https://completely-fake-domain-xyz.net/nope.jpg
+missing-protocol.com/image.png
+https://httpstat.us/500
+https://error-test-domain.org/not-found
+https://this-will-fail.com/error.jpg
+```
+
+## Mixed List - Copy & Paste for Testing (20 URLs)
+
+```
+https://images.unsplash.com/photo-1575936123452-b67c3203c357
+https://invalid-domain-12345.com/image.jpg
+https://picsum.photos/800/600
+https://example.com/nonexistent-image.jpg
+https://placekitten.com/400/300
+not-a-valid-url
+https://http.cat/200.jpg
+https://httpstat.us/404
+https://placehold.co/600x400/png
+https://broken-link.test/not-found.png
+https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg
+https://completely-fake-domain-xyz.net/nope.jpg
+https://picsum.photos/1000/600
+missing-protocol.com/image.png
+https://placekitten.com/800/600
+https://httpstat.us/500
+https://placehold.co/800x600/webp
+https://error-test-domain.org/not-found
+https://http.cat/201.jpg
+https://this-will-fail.com/error.jpg
+```
+
+## Expected Results:
+- **10 valid URLs** that should process successfully
+- **10 invalid URLs** that should be immediately rejected with appropriate error messages
+- Perfect for testing validation, error handling, and queue efficiency
+
