@@ -12,7 +12,7 @@ This README contains a concise installation and quick-start guide for local deve
 - MySQL (or change `DB_CONNECTION` to `sqlite` if you prefer)
 - Redis (used for sessions and queues)
 
-Redis is required
+#### Redis is required
 
 This application relies on Redis for session storage and queue processing. Make sure Redis is running and configured in your `.env` before starting queue workers or Reverb.
 
@@ -61,7 +61,6 @@ sudo apt install -y mysql-server redis-server nodejs npm
 2) Clone the repo
 
 ```bash
-cd ~/Public
 git clone https://github.com/akramhossainrabbi/ThumbnailForge.git ThumbnailForge
 cd ThumbnailForge
 ```
