@@ -69,7 +69,6 @@ cd ThumbnailForge
 
 ```bash
 cp .env.example .env
-php artisan key:generate
 # (optional) generate Reverb keys for REVERB_APP_KEY and REVERB_APP_SECRET
 php -r "echo base64_encode(random_bytes(32)) . PHP_EOL;"
 ```
@@ -82,6 +81,7 @@ Open `.env` and set DB_* values, `REVERB_APP_KEY`, `REVERB_APP_SECRET`, and any 
 composer install --no-interaction --prefer-dist
 npm install
 npm run build    # production build; use `npm run dev` while developing
+php artisan key:generate
 ```
 
 5) Database
